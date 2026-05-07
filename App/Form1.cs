@@ -69,7 +69,11 @@ namespace App
             }
 
             string start = txtStart.Text.Trim();
-
+            if (!graph.ContainsVertex(start))
+            {
+                txtOutput.Text = $"Вершина '{start}' не найдена в графе!";
+                return;
+            }
             try
             {
                 List<string> result = GraphAlgorithms.BFS(graph, start);
@@ -106,7 +110,11 @@ namespace App
             }
 
             string start = txtStart.Text.Trim();
-
+            if (!graph.ContainsVertex(start))
+            {
+                txtOutput.Text = $" Вершина '{start}' не найдена в графе!";
+                return;
+            }
             try
             {
                 List<string> result = GraphAlgorithms.DFS(graph, start);
@@ -141,7 +149,17 @@ namespace App
             }
 
             string start = txtStart.Text.Trim();
+            if (!graph.ContainsVertex(start))
+            {
+                txtOutput.Text = $" Вершина '{start}' не найдена в графе!";
+                return;
+            }
             string end = txtEnd.Text.Trim();
+            if (!graph.ContainsVertex(end))
+            {
+                txtOutput.Text = $" Вершина '{end}' не найдена в графе!";
+                return;
+            }
 
             bool isReachable = GraphAlgorithms.IsReachable(graph, start, end);
 
@@ -207,8 +225,17 @@ namespace App
             }
 
             string start = txtStart.Text.Trim();
+            if (!graph.ContainsVertex(start))
+            {
+                txtOutput.Text = $" Вершина '{start}' не найдена в графе!";
+                return;
+            }
             string end = txtEnd.Text.Trim();
-
+            if (!graph.ContainsVertex(end))
+            {
+                txtOutput.Text = $" Вершина '{end}' не найдена в графе!";
+                return;
+            }
             try
             {
                 var distances = GraphAlgorithms.Dijkstra(graph, start);
