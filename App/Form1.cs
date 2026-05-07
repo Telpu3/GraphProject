@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using Graphlib;
+using System.Diagnostics; 
 
 namespace App
 {
@@ -76,7 +77,9 @@ namespace App
             }
             try
             {
+                Stopwatch sw = Stopwatch.StartNew(); 
                 List<string> result = GraphAlgorithms.BFS(graph, start);
+                sw.Stop(); 
 
                 // Формируем строку с переносами каждые 6 элементов
                 string pathString = "";
@@ -92,7 +95,8 @@ namespace App
                     }
                 }
 
-                txtOutput.Text = $"Обход в ширину (BFS) от '{start}':\n\n{pathString}";
+                txtOutput.Text = $"Обход в ширину (BFS) от '{start}':\n\n{pathString}\n\n" +
+                                 $"   (Время выполнения: {sw.ElapsedMilliseconds} мс)";
             }
             catch (Exception)
             {
@@ -117,7 +121,9 @@ namespace App
             }
             try
             {
+                Stopwatch sw = Stopwatch.StartNew(); 
                 List<string> result = GraphAlgorithms.DFS(graph, start);
+                sw.Stop(); 
 
                 string pathString = "";
                 for (int i = 0; i < result.Count; i++)
@@ -131,7 +137,8 @@ namespace App
                     }
                 }
 
-                txtOutput.Text = $"Обход в глубину (DFS) от '{start}':\n\n{pathString}";
+                txtOutput.Text = $"Обход в глубину (DFS) от '{start}':\n\n{pathString}\n\n" +
+                                 $"   (Время выполнения: {sw.ElapsedMilliseconds} мс)";
             }
             catch (Exception)
             {
@@ -177,7 +184,9 @@ namespace App
                 return;
             }
 
+            Stopwatch sw = Stopwatch.StartNew(); 
             List<List<string>> components = GraphAlgorithms.FindConnectedComponents(graph);
+            sw.Stop(); 
 
             string outputText = "Компоненты связности:\n\n";
 
@@ -187,7 +196,8 @@ namespace App
                 outputText += "[" + string.Join(", ", components[i]) + "]\n\n";
             }
 
-            txtOutput.Text = outputText;
+            txtOutput.Text = outputText + $"   (Время выполнения: {sw.ElapsedMilliseconds} мс)";
+            ;
         }
 
         //Точки сочленения 
@@ -199,11 +209,14 @@ namespace App
                 return;
             }
 
+            Stopwatch sw = Stopwatch.StartNew(); 
             List<string> points = GraphAlgorithms.FindArticulationPoints(graph);
+            sw.Stop(); 
 
             if (points.Count == 0)
             {
-                txtOutput.Text = "В данном графе нет точек сочленения.\nГраф является двусвязным.";
+                txtOutput.Text = "В данном графе нет точек сочленения.\nГраф является двусвязным.\n\n" +
+                                 $"   (Время выполнения: {sw.ElapsedMilliseconds} мс)";
             }
             else
             {
@@ -212,7 +225,8 @@ namespace App
                 {
                     txt += $"  - {p}\n";
                 }
-                txtOutput.Text = txt;
+                txtOutput.Text = txt + $"   (Время выполнения: {sw.ElapsedMilliseconds} мс)";
+              
             }
         }
         //Дейкстра
@@ -238,8 +252,10 @@ namespace App
             }
             try
             {
+                Stopwatch sw = Stopwatch.StartNew(); 
                 var distances = GraphAlgorithms.Dijkstra(graph, start);
                 var path = GraphAlgorithms.GetDijkstraPath(graph, start, end);
+                sw.Stop(); 
 
                 string txt = $"Кратчайшие расстояния от вершины [{start}]:\n\n";
                 foreach (var d in distances)
@@ -262,7 +278,7 @@ namespace App
                     txt += $"\nПути до [{end}] не существует.";
                 }
 
-                txtOutput.Text = txt;
+                txtOutput.Text = txt + $"\n\n   (Время выполнения: {sw.ElapsedMilliseconds} мс)";
             }
             catch (Exception ex)
             {
@@ -284,7 +300,9 @@ namespace App
                 start = graph.GetVertices()[0];
             }
 
+            Stopwatch sw = Stopwatch.StartNew(); 
             List<Edge> mst = GraphAlgorithms.FindMST_Prim(graph, start);
+            sw.Stop(); 
 
             int totalWeight = 0;
             string txt = $"Минимальное остовное дерево (старт: {start}):\n\n";
@@ -296,7 +314,7 @@ namespace App
             }
 
             txt += $"\n   (Общий вес МОД:{totalWeight})";
-            txtOutput.Text = txt;
+            txtOutput.Text = txt + $"\n\n    (Время выполнения: {sw.ElapsedMilliseconds} мс)";
         }
         //Выход
         private void btnExit_Click(object sender, EventArgs e)
