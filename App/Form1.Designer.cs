@@ -42,7 +42,7 @@
             // 
             // btnLoad
             // 
-            btnLoad.Location = new Point(67, 34);
+            btnLoad.Location = new Point(322, 27);
             btnLoad.Name = "btnLoad";
             btnLoad.Size = new Size(157, 29);
             btnLoad.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             // btnBFS
             // 
-            btnBFS.Location = new Point(136, 101);
+            btnBFS.Location = new Point(56, 80);
             btnBFS.Name = "btnBFS";
             btnBFS.Size = new Size(94, 29);
             btnBFS.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // btnDFS
             // 
-            btnDFS.Location = new Point(140, 129);
+            btnDFS.Location = new Point(181, 80);
             btnDFS.Name = "btnDFS";
             btnDFS.Size = new Size(94, 29);
             btnDFS.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // btnReach
             // 
-            btnReach.Location = new Point(165, 178);
+            btnReach.Location = new Point(294, 80);
             btnReach.Name = "btnReach";
             btnReach.Size = new Size(217, 29);
             btnReach.TabIndex = 3;
@@ -82,7 +82,7 @@
             // 
             // btnComp
             // 
-            btnComp.Location = new Point(201, 231);
+            btnComp.Location = new Point(555, 80);
             btnComp.Name = "btnComp";
             btnComp.Size = new Size(203, 29);
             btnComp.TabIndex = 4;
@@ -93,7 +93,7 @@
             // lblStart
             // 
             lblStart.AutoSize = true;
-            lblStart.Location = new Point(273, 290);
+            lblStart.Location = new Point(115, 136);
             lblStart.Name = "lblStart";
             lblStart.Size = new Size(90, 20);
             lblStart.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             // txtStart
             // 
-            txtStart.Location = new Point(415, 294);
+            txtStart.Location = new Point(236, 133);
             txtStart.Name = "txtStart";
             txtStart.Size = new Size(125, 27);
             txtStart.TabIndex = 6;
@@ -110,7 +110,7 @@
             // lblEnd
             // 
             lblEnd.AutoSize = true;
-            lblEnd.Location = new Point(390, 335);
+            lblEnd.Location = new Point(422, 136);
             lblEnd.Name = "lblEnd";
             lblEnd.Size = new Size(89, 20);
             lblEnd.TabIndex = 7;
@@ -118,7 +118,7 @@
             // 
             // txtEnd
             // 
-            txtEnd.Location = new Point(537, 340);
+            txtEnd.Location = new Point(530, 133);
             txtEnd.Name = "txtEnd";
             txtEnd.Size = new Size(125, 27);
             txtEnd.TabIndex = 8;
@@ -126,11 +126,11 @@
             // 
             // txtOutput
             // 
-            txtOutput.Location = new Point(25, 179);
+            txtOutput.Location = new Point(230, 184);
             txtOutput.Multiline = true;
             txtOutput.Name = "txtOutput";
             txtOutput.ScrollBars = ScrollBars.Vertical;
-            txtOutput.Size = new Size(125, 268);
+            txtOutput.Size = new Size(497, 268);
             txtOutput.TabIndex = 9;
             // 
             // Form1

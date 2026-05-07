@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="App/App.csproj" />
+  <Project Path="Graphlib.Tests/Graphlib.Tests.csproj" Id="84cfe4b2-509e-447e-b93c-6042ba5d653d" />
   <Project Path="Graphlib/Graphlib.csproj" />
 </Solution>
