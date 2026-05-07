@@ -46,144 +46,185 @@
             // 
             // btnLoad
             // 
-            btnLoad.Location = new Point(823, 33);
+            btnLoad.BackColor = Color.Khaki;
+            btnLoad.FlatStyle = FlatStyle.Flat;
+            btnLoad.Location = new Point(196, 67);
+            btnLoad.Margin = new Padding(4);
             btnLoad.Name = "btnLoad";
-            btnLoad.Size = new Size(203, 29);
+            btnLoad.Size = new Size(254, 33);
             btnLoad.TabIndex = 0;
             btnLoad.Text = "Загрузить граф";
-            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.UseVisualStyleBackColor = false;
             btnLoad.Click += btnLoad_Click;
             // 
             // btnBFS
             // 
-            btnBFS.Location = new Point(869, 213);
+            btnBFS.BackColor = Color.Khaki;
+            btnBFS.FlatStyle = FlatStyle.Flat;
+            btnBFS.Location = new Point(1149, 26);
+            btnBFS.Margin = new Padding(4);
             btnBFS.Name = "btnBFS";
-            btnBFS.Size = new Size(94, 29);
+            btnBFS.Size = new Size(118, 33);
             btnBFS.TabIndex = 1;
             btnBFS.Text = "BFS";
-            btnBFS.UseVisualStyleBackColor = true;
+            btnBFS.UseVisualStyleBackColor = false;
             btnBFS.Click += btnBFS_Click;
             // 
             // btnDFS
             // 
-            btnDFS.Location = new Point(869, 290);
+            btnDFS.BackColor = Color.Khaki;
+            btnDFS.FlatStyle = FlatStyle.Flat;
+            btnDFS.Location = new Point(1149, 107);
+            btnDFS.Margin = new Padding(4);
             btnDFS.Name = "btnDFS";
-            btnDFS.Size = new Size(94, 29);
+            btnDFS.Size = new Size(118, 33);
             btnDFS.TabIndex = 2;
             btnDFS.Text = "DFS";
-            btnDFS.UseVisualStyleBackColor = true;
+            btnDFS.UseVisualStyleBackColor = false;
             btnDFS.Click += btnDFS_Click;
             // 
             // btnReach
             // 
-            btnReach.Location = new Point(823, 122);
+            btnReach.BackColor = Color.Khaki;
+            btnReach.FlatStyle = FlatStyle.Flat;
+            btnReach.Location = new Point(849, 80);
+            btnReach.Margin = new Padding(4);
             btnReach.Name = "btnReach";
-            btnReach.Size = new Size(203, 29);
+            btnReach.Size = new Size(254, 33);
             btnReach.TabIndex = 3;
             btnReach.Text = "Проверить достижимость";
-            btnReach.UseVisualStyleBackColor = true;
+            btnReach.UseVisualStyleBackColor = false;
             btnReach.Click += btnReach_Click;
             // 
             // btnComp
             // 
-            btnComp.Location = new Point(823, 79);
+            btnComp.BackColor = Color.Khaki;
+            btnComp.FlatStyle = FlatStyle.Flat;
+            btnComp.Location = new Point(849, 31);
+            btnComp.Margin = new Padding(4);
             btnComp.Name = "btnComp";
-            btnComp.Size = new Size(203, 29);
+            btnComp.Size = new Size(254, 33);
             btnComp.TabIndex = 4;
             btnComp.Text = "Компоненты связности";
-            btnComp.UseVisualStyleBackColor = true;
+            btnComp.UseVisualStyleBackColor = false;
             btnComp.Click += btnComp_Click;
             // 
             // lblStart
             // 
             lblStart.AutoSize = true;
-            lblStart.Location = new Point(12, 57);
+            lblStart.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            lblStart.Location = new Point(483, 41);
+            lblStart.Margin = new Padding(4, 0, 4, 0);
             lblStart.Name = "lblStart";
-            lblStart.Size = new Size(90, 20);
+            lblStart.Size = new Size(108, 23);
             lblStart.TabIndex = 5;
             lblStart.Text = "Вершина A:";
             // 
             // txtStart
             // 
-            txtStart.Location = new Point(140, 57);
+            txtStart.BackColor = Color.Khaki;
+            txtStart.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            txtStart.Location = new Point(643, 41);
+            txtStart.Margin = new Padding(4);
             txtStart.Name = "txtStart";
-            txtStart.Size = new Size(125, 27);
+            txtStart.Size = new Size(155, 30);
             txtStart.TabIndex = 6;
             txtStart.Text = "LeCun_1989";
             // 
             // lblEnd
             // 
             lblEnd.AutoSize = true;
-            lblEnd.Location = new Point(13, 98);
+            lblEnd.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            lblEnd.Location = new Point(484, 88);
+            lblEnd.Margin = new Padding(4, 0, 4, 0);
             lblEnd.Name = "lblEnd";
-            lblEnd.Size = new Size(89, 20);
+            lblEnd.Size = new Size(107, 23);
             lblEnd.TabIndex = 7;
             lblEnd.Text = "Вершина B:";
             // 
             // txtEnd
             // 
-            txtEnd.Location = new Point(141, 98);
+            txtEnd.BackColor = Color.Khaki;
+            txtEnd.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            txtEnd.Location = new Point(644, 88);
+            txtEnd.Margin = new Padding(4);
             txtEnd.Name = "txtEnd";
-            txtEnd.Size = new Size(125, 27);
+            txtEnd.Size = new Size(155, 30);
             txtEnd.TabIndex = 8;
             txtEnd.Text = "Llama_2023";
             // 
             // txtOutput
             // 
-            txtOutput.Font = new Font("Consolas", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            txtOutput.Location = new Point(12, 181);
+            txtOutput.BackColor = SystemColors.ActiveCaption;
+            txtOutput.BorderStyle = BorderStyle.FixedSingle;
+            txtOutput.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            txtOutput.Location = new Point(15, 230);
+            txtOutput.Margin = new Padding(4);
             txtOutput.Multiline = true;
             txtOutput.Name = "txtOutput";
             txtOutput.ReadOnly = true;
             txtOutput.ScrollBars = ScrollBars.Both;
-            txtOutput.Size = new Size(722, 401);
+            txtOutput.Size = new Size(1270, 438);
             txtOutput.TabIndex = 9;
             // 
             // btnDijkstra
             // 
-            btnDijkstra.Location = new Point(869, 255);
+            btnDijkstra.BackColor = Color.Khaki;
+            btnDijkstra.FlatStyle = FlatStyle.Flat;
+            btnDijkstra.Location = new Point(1149, 67);
+            btnDijkstra.Margin = new Padding(4);
             btnDijkstra.Name = "btnDijkstra";
-            btnDijkstra.Size = new Size(94, 29);
+            btnDijkstra.Size = new Size(118, 33);
             btnDijkstra.TabIndex = 10;
             btnDijkstra.Text = "Дейкстра";
-            btnDijkstra.UseVisualStyleBackColor = true;
+            btnDijkstra.UseVisualStyleBackColor = false;
             btnDijkstra.Click += btnDijkstra_Click;
             // 
             // btnArticulation
             // 
-            btnArticulation.Location = new Point(823, 168);
+            btnArticulation.BackColor = Color.Khaki;
+            btnArticulation.FlatStyle = FlatStyle.Flat;
+            btnArticulation.Location = new Point(849, 133);
+            btnArticulation.Margin = new Padding(4);
             btnArticulation.Name = "btnArticulation";
-            btnArticulation.Size = new Size(203, 29);
+            btnArticulation.Size = new Size(254, 33);
             btnArticulation.TabIndex = 11;
             btnArticulation.Text = "Точки сочленения";
-            btnArticulation.UseVisualStyleBackColor = true;
+            btnArticulation.UseVisualStyleBackColor = false;
             btnArticulation.Click += btnArticulation_Click;
             // 
             // btnMST
             // 
-            btnMST.Location = new Point(869, 337);
+            btnMST.BackColor = Color.Khaki;
+            btnMST.FlatStyle = FlatStyle.Flat;
+            btnMST.Location = new Point(1149, 148);
+            btnMST.Margin = new Padding(4);
             btnMST.Name = "btnMST";
-            btnMST.Size = new Size(94, 29);
+            btnMST.Size = new Size(118, 33);
             btnMST.TabIndex = 12;
             btnMST.Text = "МОД";
-            btnMST.UseVisualStyleBackColor = true;
+            btnMST.UseVisualStyleBackColor = false;
             btnMST.Click += btnMST_Click;
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(932, 568);
+            btnExit.BackColor = Color.Khaki;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Location = new Point(1, 4);
+            btnExit.Margin = new Padding(4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(94, 29);
+            btnExit.Size = new Size(118, 33);
             btnExit.TabIndex = 13;
             btnExit.Text = "Выход";
-            btnExit.UseVisualStyleBackColor = true;
+            btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1038, 609);
+            BackColor = Color.Aqua;
+            ClientSize = new Size(1298, 700);
             Controls.Add(btnExit);
             Controls.Add(btnMST);
             Controls.Add(btnArticulation);
@@ -198,8 +239,10 @@
             Controls.Add(btnDFS);
             Controls.Add(btnBFS);
             Controls.Add(btnLoad);
+            Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            Margin = new Padding(4);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Анализ графа";
             ResumeLayout(false);
             PerformLayout();
         }

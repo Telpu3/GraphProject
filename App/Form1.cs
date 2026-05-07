@@ -165,7 +165,7 @@ namespace App
 
             for (int i = 0; i < components.Count; i++)
             {
-                outputText += $"Компонента №{i + 1} ({components[i].Count} вершин):\n";
+                outputText += $"---Компонента №{i + 1} ({components[i].Count} вершин): \n";
                 outputText += "[" + string.Join(", ", components[i]) + "]\n\n";
             }
 
@@ -217,14 +217,15 @@ namespace App
                 string txt = $"Кратчайшие расстояния от вершины [{start}]:\n\n";
                 foreach (var d in distances)
                 {
-                    string status = d.Value == int.MaxValue ? "Недостижимо" : d.Value.ToString();
-                    txt += $"{d.Key}: {status}\n";
+                    string status = d.Value == int.MaxValue ? "Недостижимо  " : d.Value.ToString();
+                    txt += $"|{d.Key}:{status} \n";
                 }
 
-                txt += "\n--------------------------------------------------\n";
+                txt += "\n---------------------------------------------------------------------------------------------------------------\n";
 
                 if (path.Count > 0 && distances.ContainsKey(end) && distances[end] != int.MaxValue)
                 {
+                    txt += "\n";
                     txt += $"\nМаршрут до [{end}]:\n";
                     txt += $"{string.Join(" -> ", path)}\n";
                     txt += $"\nСтоимость пути: {distances[end]}";
@@ -263,11 +264,11 @@ namespace App
 
             foreach (var edge in mst)
             {
-                txt += $"Ребро в вершину {edge.Target}, вес: {edge.Weight}\n";
+                txt += $"| Ребро в вершину {edge.Target}, вес:{edge.Weight}\n";
                 totalWeight += edge.Weight;
             }
 
-            txt += $"\nОбщий вес МОД: {totalWeight}";
+            txt += $"\n   (Общий вес МОД:{totalWeight})";
             txtOutput.Text = txt;
         }
         //Выход
