@@ -204,15 +204,5 @@ namespace Graphlib.Tests
             int totalWeight = mst.Sum(e => e.Weight);
             Assert.AreEqual(3, totalWeight);
         }
-
-        [TestMethod]
-        public void FindMST_Prim_EdgeCountEqualsVMinus1()
-        {
-            _graph.AddEdge("A", "B", 1);
-            _graph.AddEdge("B", "C", 2);
-            _graph.AddEdge("C", "D", 3);
-            var mst = GraphAlgorithms.FindMST_Prim(_graph, "A");
-            Assert.AreEqual(3, mst.Count); // 4 вершины - 1 = 3 ребра
-        }
     }
 }

@@ -51,8 +51,8 @@ namespace App
                 }
 
                 txtOutput.Text = "Граф успешно загружен.\n" +
-                                 $"Вершин: {graph.GetVertexCount()}\n" +
-                                 $"Рёбер: {edgesCount}";
+                                 $" Вершин:{graph.GetVertexCount()}\n" +
+                                 $"  Рёбер:{edgesCount}";
             }
             catch (Exception ex)
             {

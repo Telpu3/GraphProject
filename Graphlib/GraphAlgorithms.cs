@@ -244,20 +244,23 @@ namespace Graphlib
                 if (!visited.Contains(v))
                 {
                     children++;
-                    parent[v] = u;
+                    parent[v] = u; 
                     APUtil(v, visited, disc, low, parent, ap, ref time, graph);
 
                     low[u] = Math.Min(low[u], low[v]);
 
-                    //Условия точки сочленения
-                    if (parent.ContainsKey(u) == false && children > 1)
+                    // Проверка условий точки сочленения
+                    if (!parent.ContainsKey(u) && children > 1)
                         ap.Add(u);
 
                     if (parent.ContainsKey(u) && low[v] >= disc[u])
                         ap.Add(u);
                 }
-                else if (v != parent[u])
-                {
+                else
+                {              
+                    if (parent.ContainsKey(u) && parent[u] == v)
+                        continue;
+
                     low[u] = Math.Min(low[u], disc[v]);
                 }
             }
